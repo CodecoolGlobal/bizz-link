@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import QRCode from "react-qr-code";
 import "./css_files/BusinessCard.css";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import defaultPicture from "./pictures/PngItem_1468295.png";
 
 const BusinessCard = () => {
     const [param] = useSearchParams();
@@ -80,7 +81,7 @@ const BusinessCard = () => {
                         <div className="col-md-12 text-center">
                             <img
                                 style={{ height: 50, width: 50 }}
-                                src={profilePic}
+                                src={profilePic ? profilePic : defaultPicture}
                                 alt="Profile"
                                 className="img-fluid rounded-circle profile-pic"
                             />

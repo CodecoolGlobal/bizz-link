@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import QRCode from "react-qr-code";
+import defaultPicture from "./pictures/PngItem_1468295.png";
 
 import {
     MDBCol,
@@ -43,11 +44,9 @@ export default function Dashboard() {
             }
         );
         if (response.status !== 200) {
-            console.log("STATUS NIJE 200");
             navigate("*");
         } else {
             const data = await response.json();
-            console.log(response);
             setUserData({ ...data });
         }
     };
@@ -103,13 +102,12 @@ export default function Dashboard() {
                                         src={
                                             userData.picture
                                                 ? profilePic
-                                                : "/src/components/pictures/PngItem_1468295.png"
+                                                : defaultPicture
                                         }
                                         alt="Profile"
                                         className="mt-4 mb-2 img-thumbnail"
                                         fluid
                                         style={{ width: "150px", zIndex: "1" }}
-                                        // ref={profilePic}
                                     />
                                 </div>
                                 <div

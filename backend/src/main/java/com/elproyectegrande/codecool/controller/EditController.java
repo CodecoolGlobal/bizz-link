@@ -2,7 +2,7 @@ package com.elproyectegrande.codecool.controller;
 
 import com.elproyectegrande.codecool.auth.EditRequest;
 import com.elproyectegrande.codecool.auth.EditResponse;
-import com.elproyectegrande.codecool.model.User;
+import com.elproyectegrande.codecool.auth.UserResponse;
 import com.elproyectegrande.codecool.service.EditService;
 import com.elproyectegrande.codecool.service.JwtService;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +25,7 @@ public class EditController {
     }
 
     @GetMapping("/**")
-    public ResponseEntity<User> getUserData(@RequestHeader Map<String, String> header, @RequestParam String username, @RequestParam String email) throws IOException {
+    public ResponseEntity<UserResponse> getUserData(@RequestHeader Map<String, String> header, @RequestParam String username, @RequestParam String email) throws IOException {
         String token = header.get("authorization").substring(7);
         String usernameFromToken = jwtService.extractUsername(token);
         return editService.getUserData(usernameFromToken, username, email);

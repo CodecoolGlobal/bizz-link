@@ -2,7 +2,6 @@ package com.elproyectegrande.codecool.controller;
 
 
 import com.elproyectegrande.codecool.service.AuthorizationService;
-import com.elproyectegrande.codecool.service.EditService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,12 +12,10 @@ import java.util.Map;
 public class AuthorizationController {
 
     private final AuthorizationService authorizationService;
-    private final EditService editService;
 
 
-    public AuthorizationController(AuthorizationService authorizationService, EditService editService) {
+    public AuthorizationController(AuthorizationService authorizationService) {
         this.authorizationService = authorizationService;
-        this.editService = editService;
     }
 
 

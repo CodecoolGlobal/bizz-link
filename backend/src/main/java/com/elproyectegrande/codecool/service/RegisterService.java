@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
@@ -39,6 +41,7 @@ public class RegisterService {
 
     public ResponseEntity<String> registerNewUser(RegisterRequest request) {
         String userExistMsg = "User already exist";
+        Charset charset = StandardCharsets.UTF_16;
         Optional<User> tempUserByEmail = repository.findByEmail(request.getEmail());
         if (tempUserByEmail.isPresent()) {
             return new ResponseEntity<>(userExistMsg, HttpStatusCode.valueOf(400));
@@ -51,7 +54,7 @@ public class RegisterService {
                 .lastName("")
                 .facebook("")
                 .linkedin("")
-                .picture("".getBytes())
+                .picture("".getBytes(charset))
                 .isActive(false)
                 .creationTime(LocalDateTime.now())
                 .role(Role.USER)

@@ -9,6 +9,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
+import java.util.Base64;
 
 
 @Service
@@ -35,7 +36,7 @@ public class AuthenticationService {
                     .email(request.getEmail())
                     .username(user.getUsername())
                     .phone(user.getPhone())
-                    .picture(user.getPicture())
+                    .picture(Base64.getEncoder().encodeToString(user.getPicture()))
                     .role(user.getRole())// Add the username to the response
                     .token(jwtToken)
                     .build();

@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import java.util.Base64;
 import java.util.Optional;
 
 @Service
@@ -26,7 +27,7 @@ public class QRCodeService {
             response.setLastname(actualUser.getLastName());
             response.setPhone(actualUser.getPhone());
             response.setEmail(actualUser.getEmail());
-            response.setPicture(actualUser.getPicture());
+            response.setPicture(Base64.getEncoder().encodeToString(actualUser.getPicture()));
             response.setLinkedin(actualUser.getLinkedin());
             response.setFacebook(actualUser.getFacebook());
 
