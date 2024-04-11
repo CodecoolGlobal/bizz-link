@@ -1,7 +1,8 @@
 <a href="https://magical-seahorse-032798.netlify.app/">Try me </a>🙂
 
+![Bizz-Link-Screen Capture](https://github.com/CodecoolGlobal/bizz-link/assets/106410269/84eb7ff1-dd52-4507-9ded-695f09ca0b1b)
 
-<img width="949" alt="Home page" src="/frontend/src/components/pictures/Pngitem_1468295.png">
+
 ---
 
 # BizzLink
