@@ -20,7 +20,7 @@ BizzLink is a modern application that revolutionizes the way we share contact in
 
 ## Technologies Used
 
-- **Frontend**: React
+- **Frontend**: Vite
 - **Backend**: Java, Spring Framework
 - **Database**: PostgreSQL
 - **Authentication**: Spring Security
@@ -48,8 +48,8 @@ To get a local copy of the project up and running, follow these steps:
 3. Set up the frontend:
    - Ensure you have Node.js and npm installed.
    - Navigate to the frontend directory and install dependencies using `npm install`.
-   - Start the frontend server using `npm start`.
-4. Access the application in your browser at `http://localhost:3000`.
+   - Start the frontend server using `npm run dev`.
+4. Access the application in your browser at `http://localhost:5173`.
 
 ## License
 
