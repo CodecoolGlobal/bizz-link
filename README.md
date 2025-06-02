@@ -1,4 +1,4 @@
-<a href="https://magical-seahorse-032798.netlify.app/">Try me </a>🙂
+<a href="https://elegant-stroopwafel-9ff4ad.netlify.app/">Try me </a>🙂
 
 ![Bizz-Link-Screen Capture](https://github.com/CodecoolGlobal/bizz-link/assets/106410269/84eb7ff1-dd52-4507-9ded-695f09ca0b1b)
 
